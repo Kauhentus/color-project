@@ -1,5 +1,5 @@
 export const rgb_to_hex = (...rgb: number[]) => {
-    const [r, g, b] = rgb;
+    const [r, g, b] = rgb.map(n => n | 0);
     const hex_r = r.toString(16).padStart(2, '0');
     const hex_g = g.toString(16).padStart(2, '0');
     const hex_b = b.toString(16).padStart(2, '0');
